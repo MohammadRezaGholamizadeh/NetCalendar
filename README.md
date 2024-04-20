@@ -1,5 +1,5 @@
 # NetCalendar
-This Package Is For Using The Different TypeOf DateTime And Converting The Date Together With High Accuracy And Most Easily That You Can Imagine . This Package Support Hijri Calendar , Jalali Calander (Persian Calendar) , Gregorian Calendar , Solar Calendar
+This Package Is For Using The Different TypeOf DateTime And Converting The Date Together With High Accuracy And Most Easily That You Can Imagine . This Package Support Hijri Calendar , Jalali Calander (Persian Calendar) , Gregorian Calendar
 This Is The Best Tools For Converting Date To Each Other. Enjoy It
 
 ![Logo](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/NetCalendar/main/ReadmeCreator/Files/NetCalendar.png)
@@ -12,7 +12,7 @@ I MohammadReza Gholamizadeh. I`m Dotnet Software Developer That Always Try To Ma
 ## 🔗 Links
 [![Source Code](https://img.shields.io/badge/Source_Code-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MohammadRezaGholamizadeh/NetCalendar/tree/main)
 [![MohammadReza Gholamizadeh GitHub](https://img.shields.io/badge/MohammadReza_Gholamizadeh_GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MohammadRezaGholamizadeh)
-[![Readme File]()](https://github.com/MohammadRezaGholamizadeh/NetCalendar/blob/main/README.md)
+[![Readme File](https://img.shields.io/badge/Readme_File-e23a08?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MohammadRezaGholamizadeh/NetCalendar/blob/main/README.md)
 [![Nuget](https://img.shields.io/badge/Nuget-4974a5?style=for-the-badge&logo=nuget&logoColor=white)](https://www.nuget.org/profiles/MohammadrezaGholamizadeh_Phoenix)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohammadreza-gholamizadeh-b94b1521b/)
 
@@ -46,12 +46,15 @@ NuGet\Install-Package NetCalendar -Version 2024.04.20
 | -------- | ------- | ------------------------- |
 | `gregorianDate` | `DateTime` | ** **Required.**                      |
 
+With This Method We Can Convert Gregorian Date Time To jalali Date Time With Hight Accuracy.
+
 * IsLeapYear(year)
 
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `year` | `Int32` | ** **Required.**                      |
 
+ This MEthod Tell Us That A Year Be Leap Or Not.
 
 ## Type : JalaliDateTime
 ### This Type Has 1 Custom Constructor : 
@@ -62,6 +65,7 @@ NuGet\Install-Package NetCalendar -Version 2024.04.20
 | `year` | `Int32` | ** **Required.**                    |
 | `month` | `Int32` | ** **Required.**                    |
 | `day` | `Int32` | ** **Required.**                    |
+
 ### JalaliDateTime Methods : 
 
 * AddDays(days)
@@ -70,11 +74,15 @@ NuGet\Install-Package NetCalendar -Version 2024.04.20
 | -------- | ------- | ------------------------- |
 | `days` | `Int32` | ** **Required.**                      |
 
+With This Method We Can Add Days To Current Date In Jalali Format.
+
 * AddYears(years)
 
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `years` | `Int32` | ** **Required.**                      |
+
+With This Method We Can Add Years To Current Date In Jalali Format.
 
 * AddMonths(months)
 
@@ -82,14 +90,19 @@ NuGet\Install-Package NetCalendar -Version 2024.04.20
 | -------- | ------- | ------------------------- |
 | `months` | `Int32` | ** **Required.**                      |
 
+With This Method We Can Add Months To Current Date In Jalali Format.
+
 * IsLeapYear()
 
+ This MEthod Tell Us That A Year Be Leap Or Not.
 
 * IsLeapMonth()
 
+ This MEthod Tell Us That A Month Be Leap Or Not.
 
 * IsLeapDay()
 
+ This MEthod Tell Us That A Day Be Leap Or Not.
 
 
 ## Type : GregorianCalendarSet
@@ -103,6 +116,8 @@ NuGet\Install-Package NetCalendar -Version 2024.04.20
 | -------- | ------- | ------------------------- |
 | `jalaliDateTime` | `JalaliDateTime` | ** **Required.**                      |
 
+With This Method We Can Convert Jalali Date To Gregorian Date With High Accuracy.
+
 * ConvertJalaliToGregorian(year, month, day)
 
 | Parameter | Type     | Description                |
@@ -111,4 +126,5 @@ NuGet\Install-Package NetCalendar -Version 2024.04.20
 | `month` | `Int32` | ** **Required.**                      |
 | `day` | `Int32` | ** **Required.**                      |
 
+With This Method We Can Convert Jalali Date To Gregorian Date With High Accuracy.
 

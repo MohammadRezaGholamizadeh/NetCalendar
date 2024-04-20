@@ -30,7 +30,7 @@ var generatedReadme =
             },
             new GitHubLink()
             {
-                LogoType = LogoLinkType.CustomLink,
+                LogoType = LogoLinkType.Github,
                 Title = "Readme File",
                 Link = "https://github.com/MohammadRezaGholamizadeh/NetCalendar/blob/main/README.md",
             },
@@ -58,4 +58,4 @@ var generatedReadme =
         .RenderAllAssembliesToText()
         .GetText();
 
-File.WriteAllText(@$"D:\TAAV\NetCalendar\Src\NetCalendar\README.md", generatedReadme);
+File.WriteAllText(@$"D:\TAAV\NetCalendar\README.md", generatedReadme);
