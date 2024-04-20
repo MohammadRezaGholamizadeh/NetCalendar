@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\Phoenix\.nuget\packages\dotnetreportsengine.readmegeneration\1.0.0\contentFiles\any\netstandard2.1\ReadmeLogo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Files\Sample.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Files\Sample.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetReportsEngine.ReadmeGeneration" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Src\NetCalendar\NetCalendar.csproj" />
+  </ItemGroup>
+
+</Project>
