@@ -1,9 +1,11 @@
-﻿using NetCalendar.JalaliCalendersSet;
+﻿using DotNetReportsEngine.ReadmeGeneration.Details;
+using NetCalendar.JalaliCalendersSet;
 using System;
 using System.Linq;
 
 namespace NetCalendar.GregorianCalendersSet
 {
+    [RenderInReadmeFile]
     public class GregorianCalendarSet
     {
         public DateTime ConvertJalaliToGregorian(

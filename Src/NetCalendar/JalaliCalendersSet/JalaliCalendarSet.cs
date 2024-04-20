@@ -1,8 +1,10 @@
-﻿using System;
+﻿using DotNetReportsEngine.ReadmeGeneration.Details;
+using System;
 using System.Linq;
 
 namespace NetCalendar.JalaliCalendersSet
 {
+    [RenderInReadmeFile]
     public class JalaliCalendarSet
     {
         public JalaliDateTime ConvertGregorianToJalali(DateTime gregorianDate)

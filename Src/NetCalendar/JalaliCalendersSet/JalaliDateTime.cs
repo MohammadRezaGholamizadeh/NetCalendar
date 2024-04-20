@@ -1,7 +1,9 @@
-﻿using System.Linq;
+﻿using DotNetReportsEngine.ReadmeGeneration.Details;
+using System.Linq;
 
 namespace NetCalendar.JalaliCalendersSet
 {
+    [RenderInReadmeFile]
     public sealed class JalaliDateTime
     {
         public JalaliDateTime(
