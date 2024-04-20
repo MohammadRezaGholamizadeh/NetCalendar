@@ -1,8 +1,24 @@
 ﻿using NetCalendar;
 
-var s =
-    NetCalendars
-    .JalaliCalander
-    .ConvertGregorianToJalali(new DateTime(2024, 04, 20));
+var gregorianDate = DateTime.Now;
 
-var d = "";
+var jalaliDate = NetCalendars.JalaliCalander.ConvertGregorianToJalali(gregorianDate);
+
+jalaliDate
+    .AddYears(1)
+    .AddMonths(1)
+    .AddDays(1);
+
+var convertedDateFromJalaliToGregorian =
+    NetCalendars.GregorianCalendar
+                .ConvertJalaliToGregorian(jalaliDate);
+
+var convertedDateFromJalaliToGregorian2 =
+    NetCalendars.GregorianCalendar
+                .ConvertJalaliToGregorian(jalaliDate.Year, jalaliDate.Month, jalaliDate.Day);
+
+
+
+
+
+
