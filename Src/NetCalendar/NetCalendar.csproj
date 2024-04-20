@@ -6,11 +6,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="C:\Users\Phoenix\.nuget\packages\dotnetreportsengine.readmegeneration\1.0.0\contentFiles\any\netstandard2.1\LICENSE" />
+    <Content Remove="C:\Users\Phoenix\.nuget\packages\dotnetreportsengine.readmegeneration\1.0.0\contentFiles\any\netstandard2.1\ReadmeLogo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="KabisehYearFiles\GerogorianKabiseh.txt" />
     <None Remove="KabisehYearFiles\HijriKabiseh.txt" />
     <None Remove="KabisehYearFiles\JalaliKabiseh.txt" />
+    <None Remove="LICENSE" />
     <None Remove="PackageFiles\Logo.ico" />
     <None Remove="PackageFiles\Logo.png" />
+    <None Remove="README.md" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,10 +30,16 @@
     <EmbeddedResource Include="KabisehYearFiles\JalaliKabiseh.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="LICENSE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="PackageFiles\Logo.ico">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="PackageFiles\Logo.png" />
+    <EmbeddedResource Include="README.md">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
