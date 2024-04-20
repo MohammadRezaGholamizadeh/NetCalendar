@@ -53,7 +53,7 @@ var generatedReadme =
             LicenseLink = "https://github.com/MohammadRezaGholamizadeh/NetCalendar/blob/main/LICENSE"
         })
         .AddCustomText("Get Start With Sample Code", "You Can Use This Package And Tools Like This !!!")
-        .SetLogo("Sample","")
+        .SetLogo("Sample", "https://raw.githubusercontent.com/MohammadRezaGholamizadeh/NetCalendar/main/ReadmeCreator/Files/Sample.png")
         .AddCustomBashCommand("Package Manager", @"NuGet\Install-Package NetCalendar -Version 2024.04.20")
         .RenderAllAssembliesToText()
         .GetText();
