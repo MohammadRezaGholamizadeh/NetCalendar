@@ -10,7 +10,7 @@ var generatedReadme =
         .SetLogo(new Logo()
         {
             Title = "Logo",
-            LogoLink = "https://raw.githubusercontent.com/MohammadRezaGholamizadeh/FluentGenerator/main/src/FluentGenerator/Logo.ico"
+            LogoLink = "https://raw.githubusercontent.com/MohammadRezaGholamizadeh/NetCalendar/main/ReadmeCreator/Files/NetCalendar.png"
         })
         .AddAuthor("@Mohammadreza Gholamizadeh [Phoenix]", "https://github.com/MohammadRezaGholamizadeh")
         .SetGitHub_AboutMe("I MohammadReza Gholamizadeh. I`m Dotnet Software Developer That Always Try To Make All things Easy for Developing. Please Star the Project And Package to Cover And Enjoy When Using It.")
@@ -58,4 +58,4 @@ var generatedReadme =
         .RenderAllAssembliesToText()
         .GetText();
 
-File.WriteAllText(@$"D:\All Projects\FluentGenerator\README.md", generatedReadme);
+File.WriteAllText(@$"D:\TAAV\NetCalendar\Src\NetCalendar\README.md", generatedReadme);
