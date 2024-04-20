@@ -1,8 +1,23 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
+    <ApplicationIcon>PackageFiles\Logo.ico</ApplicationIcon>
+    <DebugType>embedded</DebugType>
+    <Version>2024.04.21</Version>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Description>This Package Is For Using The Different TypeOf DateTime And Converting The Date Together With High Accuracy And Most Easily That You Can Imagine . This Package Support Hijri Calendar , Jalali Calander (Persian Calendar) , Gregorian Calendar This Is The Best Tools For Converting Date To Each Other. Enjoy It</Description>
+    <Copyright>MohammadReza Gholamizadeh [Phoenix] </Copyright>
+    <PackageProjectUrl>https://github.com/MohammadRezaGholamizadeh/NetCalendar</PackageProjectUrl>
+    <PackageIcon>PackageFiles\Logo.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/MohammadRezaGholamizadeh/NetCalendar</RepositoryUrl>
+    <PackageTags>Calendar;NetCal;NetCalendar;DotnetCalendar;GerogorianCalendar;JalaliCalendar;HijriCalendar;ICal;C#Calendar;PersianCalendar;</PackageTags>
+    <PackageReleaseNotes>Support Gerogorian Calendar , Jalali Calendar , Hijri Calendar</PackageReleaseNotes>
+    <Company>Mohammadreza Gholamizadeh [Phoenix] </Company>
+    <Authors>Mohammadreza Gholamizadeh [Phoenix] </Authors>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,7 +30,10 @@
     <None Remove="KabisehYearFiles\HijriKabiseh.txt" />
     <None Remove="KabisehYearFiles\JalaliKabiseh.txt" />
     <None Remove="PackageFiles\Logo.ico" />
-    <None Remove="PackageFiles\Logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="PackageFiles\Logo.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,10 +50,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="PackageFiles\Logo.png" />
+    <EmbeddedResource Include="README.md" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="DotNetReportsEngine.ReadmeGeneration" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="PackageFiles\Logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
