@@ -97,7 +97,7 @@ namespace NetCalendar.JalaliCalendersSet
                 Month += months;
             }
 
-            if ((Month + months) % 12 == 0)
+            else if ((Month + months) % 12 == 0)
             {
                 Year += (Month + months) / 12;
                 Month = 12;
