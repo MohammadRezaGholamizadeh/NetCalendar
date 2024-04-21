@@ -1,13 +1,11 @@
-﻿using System.IO;
-
-namespace NetCalendar
+﻿namespace NetCalendar
 {
     internal static class CalendarKabisehSet
     {
         public static string[] JalaliKabiseh
-               => File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), "KabisehYearFiles", "JalaliKabiseh.txt"));
+               => CalendarRequirementSet.GetKabisehYearFileDetail("JalaliKabiseh.txt").SeperateAllLines();
 
         public static string[] GregorianKabiseh
-               => File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), "KabisehYearFiles", "GerogorianKabiseh.txt"));
+               => CalendarRequirementSet.GetKabisehYearFileDetail("GerogorianKabiseh.txt").SeperateAllLines();
     }
 }

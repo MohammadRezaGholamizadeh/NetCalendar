@@ -36,15 +36,27 @@ namespace NetCalendar.JalaliCalendersSet
             var remainigDay = totalDays % 365;
             var kabisehCount = CalendarKabisehSet.JalaliKabiseh.Count(_ => int.Parse(_) < newCalculatedYear);
 
-            if (remainigDay <= kabisehCount)
+            if (kabisehCount > 365)
+            {
+                for (int i = 0; i < (int)(kabisehCount / 365); i++)
+                {
+                    newCalculatedYear -= 1;
+                    if (CalendarRequirementSet.PersianCalendar.IsLeapYear(newCalculatedYear - 1))
+                    {
+                        remainigDay += 1;
+                    }
+                }
+            }
+
+            if (remainigDay <= (kabisehCount % 365))
             {
                 newCalculatedYear -= 1;
                 remainigDay =
-                    (CalendarKabisehSet.JalaliKabiseh.Any(_ => int.Parse(_) == newCalculatedYear)
+                    (CalendarRequirementSet.PersianCalendar.IsLeapYear(newCalculatedYear)
                     ? 366
                     : 365)
                     + remainigDay
-                    - kabisehCount;
+                    - (kabisehCount % 365);
             }
 
             var newJalaliMonth =
