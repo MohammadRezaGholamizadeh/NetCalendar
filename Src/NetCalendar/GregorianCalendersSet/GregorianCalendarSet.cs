@@ -36,7 +36,7 @@ namespace NetCalendar.GregorianCalendersSet
             for (int i = 1; i < 13; i++)
             {
                 gerogorianMonth = i;
-                if (DateTime.IsLeapYear(gerogorianYear) && i == 2)
+                if (gerogorianDays > tartibGerogorianDays[i - 1] && DateTime.IsLeapYear(gerogorianYear) && i == 2)
                 {
                     gerogorianDays -= 29;
                 }
@@ -80,7 +80,8 @@ namespace NetCalendar.GregorianCalendersSet
             for (int i = 1; i < 13; i++)
             {
                 gerogorianMonth = i;
-                if (DateTime.IsLeapYear(gerogorianYear) && i == 2)
+                if (gerogorianDays > tartibGerogorianDays[i - 1] 
+                    && DateTime.IsLeapYear(gerogorianYear) && i == 2)
                 {
                     gerogorianDays -= 29;
                 }

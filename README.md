@@ -27,7 +27,7 @@ You Can Use This Package And Tools Like This !!!
 ## Commands
 Package Manager
 ```bash
-NuGet\Install-Package NetCalendar -Version 2024.04.23
+NuGet\Install-Package NetCalendar -Version 2024.04.24
 ```
 
 # Class And Method Implementation
