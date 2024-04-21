@@ -92,8 +92,23 @@ namespace NetCalendar.JalaliCalendersSet
 
         public JalaliDateTime AddMonths(int months)
         {
-            Year += months / 12;
-            Month += months % 12;
+            if (Month + months == 12)
+            {
+                Month += months;
+            }
+
+            if ((Month + months) % 12 == 0)
+            {
+                Year += (Month + months) / 12;
+                Month = 12;
+            }
+
+            else
+            {
+                Year += (Month + months) / 12;
+                Month = (Month + months) % 12;
+            }
+
             return this;
         }
 

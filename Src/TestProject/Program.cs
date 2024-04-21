@@ -1,12 +1,11 @@
 ﻿using NetCalendar;
 
-var gregorianDate = DateTime.Now;
+var gregorianDate = new DateTime(2025 , 02 , 12);
 
 var jalaliDate = NetCalendars.JalaliCalander.ConvertGregorianToJalali(gregorianDate);
 
 jalaliDate
-   .AddMonths(1)
-   .AddDays(52000);
+   .AddMonths(1);
 
 var convertedDateFromJalaliToGregorian =
     NetCalendars.GregorianCalendar

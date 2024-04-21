@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ApplicationIcon>PackageFiles\Logo.ico</ApplicationIcon>
     <DebugType>embedded</DebugType>
-    <Version>2024.04.24</Version>
+    <Version>2024.04.25</Version>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <Description>This Package Is For Using The Different TypeOf DateTime And Converting The Date Together With High Accuracy And Most Easily That You Can Imagine . This Package Support Hijri Calendar , Jalali Calander (Persian Calendar) , Gregorian Calendar This Is The Best Tools For Converting Date To Each Other. Enjoy It</Description>
@@ -19,19 +19,16 @@
     <Company>Mohammadreza Gholamizadeh [Phoenix] </Company>
     <Authors>Mohammadreza Gholamizadeh [Phoenix] </Authors>
     <AnalysisLevel>none</AnalysisLevel>
-    <FileVersion>2024.04.24</FileVersion>
+    <FileVersion>2024.04.25</FileVersion>
     <NeutralLanguage>aa-ET</NeutralLanguage>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DebugType>embedded</DebugType>
-  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'" />
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DebugType>embedded</DebugType>
-  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'" />
 
   <ItemGroup>
+    <Content Remove="C:\Users\M.Gholamizadeh.TAAVSYS\.nuget\packages\dotnetreportsengine.readmegeneration\1.0.0\contentFiles\any\netstandard2.1\ReadmeLogo.ico" />
     <Content Remove="C:\Users\Phoenix\.nuget\packages\dotnetreportsengine.readmegeneration\1.0.0\contentFiles\any\netstandard2.1\LICENSE" />
     <Content Remove="C:\Users\Phoenix\.nuget\packages\dotnetreportsengine.readmegeneration\1.0.0\contentFiles\any\netstandard2.1\ReadmeLogo.ico" />
   </ItemGroup>
