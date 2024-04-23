@@ -21,23 +21,30 @@ namespace NetCalendar.JalaliCalendersSet
                 (jalaliYear - 1) * 365 + CalendarKabisehSet.JalaliKabiseh.Count(_ => int.Parse(_) < jalaliYear);
 
             var totalDaysInCurrentYear = totalGerogorianDays - totalDaysOfPreviousYears;
+
             var jalaliMonth =
                 totalDaysInCurrentYear == 186
                 ? 6
                 : totalDaysInCurrentYear < 186
-                  ? (int)(totalDaysInCurrentYear / 31) + 1
+                  ? (int)(totalDaysInCurrentYear / 31) <= 1
+                    ? 1
+                    : (int)(totalDaysInCurrentYear / 31)
                   : totalDaysInCurrentYear >= 365
                     ? 12
-                    : (int)((totalDaysInCurrentYear - 186) / 30) + 7;
+                    : (int)((totalDaysInCurrentYear - 186) % 30) == 0
+                      ? (int)((totalDaysInCurrentYear - 186) / 30) + 6
+                      : (int)((totalDaysInCurrentYear - 186) / 30) + 7;
 
             var jalaliDay =
-                jalaliMonth - 1 <= 6
-                ? (totalDaysInCurrentYear - (jalaliMonth - 1) * 31) % 30 == 0
-                   ? 30
-                   : (totalDaysInCurrentYear - (jalaliMonth - 1) * 31) % 30
-                : (totalDaysInCurrentYear - 186) % 30 == 0
-                  ? 30
-                  : (totalDaysInCurrentYear - 186) % 30;
+                jalaliMonth == 1 ?
+                totalDaysInCurrentYear :
+                   jalaliMonth - 1 <= 6
+                   ? (totalDaysInCurrentYear - (jalaliMonth - 1) * 31) % 30 == 0
+                      ? 30
+                      : (totalDaysInCurrentYear - (jalaliMonth - 1) * 31) % 30
+                   : (totalDaysInCurrentYear - 186) % 30 == 0
+                     ? 30
+                     : (totalDaysInCurrentYear - 186) % 30;
 
             return new JalaliDateTime(jalaliYear, jalaliMonth, (int)jalaliDay);
         }
