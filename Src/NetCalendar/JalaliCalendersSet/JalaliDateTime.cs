@@ -1,6 +1,5 @@
 ﻿using DotNetReportsEngine.ReadmeGeneration.Details;
 using System.Linq;
-using System.Runtime.CompilerServices;
 
 namespace NetCalendar.JalaliCalendersSet
 {
@@ -38,82 +37,6 @@ namespace NetCalendar.JalaliCalendersSet
             return this;
         }
 
-
-        public JalaliDateTime AddDays2(int days)
-        {
-            var totalDays =
-                (Year - 1) * 365 + CalendarKabisehSet.JalaliKabiseh.Count(_ => int.Parse(_) < Year)
-                + (Month <= 6
-                  ? (Month - 1) * 31 + Day
-                  : 186 + (Month - 7) * 30 + Day);
-
-            totalDays += days;
-
-            var newCalculatedYear = (totalDays % 365 == 0) ? (totalDays / 365) : (int)(totalDays / 365) + 1;
-            var remainigDay = totalDays % 365 == 0 ? 1 : totalDays % 365;
-            var kabisehCount = CalendarKabisehSet.JalaliKabiseh.Count(_ => int.Parse(_) < newCalculatedYear);
-
-
-            if (kabisehCount > 365)
-            {
-                for (int i = 0; i < (int)(kabisehCount / 365); i++)
-                {
-                    newCalculatedYear -= 1;
-                    if (CalendarRequirementSet.PersianCalendar.IsLeapYear(newCalculatedYear - 1))
-                    {
-                        remainigDay += 1;
-                    }
-                }
-            }
-
-            if (remainigDay <= (kabisehCount % 365))
-            {
-                newCalculatedYear -= 1;
-                remainigDay =
-                    (CalendarRequirementSet.PersianCalendar.IsLeapYear(newCalculatedYear)
-                    ? 366
-                    : 365)
-                    + remainigDay
-                    - (kabisehCount % 365);
-            }
-            else
-            {
-                remainigDay -= kabisehCount % 365;
-            }
-
-            var newJalaliMonth =
-               remainigDay == 186
-               ? 6
-               : remainigDay < 186
-                 ? (remainigDay / 31) <= 1 && remainigDay % 31 == 0
-                   ? 1
-                   : (remainigDay % 31) == 0
-                     ? (remainigDay / 31)
-                     : (remainigDay / 31) + 1
-                 : remainigDay >= 365
-                   ? 12
-                   : ((remainigDay - 186) % 30) == 0
-                     ? ((remainigDay - 186) / 30) + 6
-                     : ((remainigDay - 186) / 30) + 7;
-
-            var newJalaliDay =
-                newJalaliMonth == 1
-                ? remainigDay
-                : newJalaliMonth <= 6
-                  ? remainigDay % 31 == 0
-                     ? 31
-                     : remainigDay % 31
-                  : (remainigDay - 186) % 30 == 0
-                     ? 30
-                     : (remainigDay - 186) % 30;
-
-
-            Year = newCalculatedYear;
-            Month = newJalaliMonth;
-            Day = newJalaliDay;
-
-            return this;
-        }
 
         public JalaliDateTime AddYears(int years)
         {

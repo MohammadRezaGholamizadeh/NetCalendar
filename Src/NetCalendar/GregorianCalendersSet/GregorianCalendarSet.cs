@@ -42,7 +42,15 @@ namespace NetCalendar.GregorianCalendersSet
                     && DateTime.IsLeapYear(gerogorianYear)
                     && gerogorianDays > tartibGerogorianDays[i - 1])
                 {
-                    gerogorianDays = gerogorianDays - 29 == 0 ? 1 : gerogorianDays -= 29;
+                    if (gerogorianDays - 29 == 0)
+                    {
+                        gerogorianDays = 29;
+                        break;
+                    }
+                    else
+                    {
+                        gerogorianDays -= 29;
+                    }
                 }
                 else if (gerogorianDays > tartibGerogorianDays[i - 1])
                 {
