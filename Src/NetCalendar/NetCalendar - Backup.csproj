@@ -14,7 +14,7 @@
     <PackageIcon>PackageFiles\Logo.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/MohammadRezaGholamizadeh/NetCalendar</RepositoryUrl>
-    <PackageTags>Calendar;NetCal;NetCalendar;DotnetCalendar;GerogorianCalendar;JalaliCalendar;HijriCalendar;ICal;C#Calendar;PersianCalendar;datetime;calendar;timezone;time;cconvert;dateconvert;dotnet;datetime;dateandtime;dateconverting;dateconverter;jalali;hijri;timepicker;datepicker;</PackageTags>
+    <PackageTags>Calendar;NetCal;NetCalendar;DotnetCalendar;GerogorianCalendar;JalaliCalendar;HijriCalendar;ICal;C#Calendar;PersianCalendar;</PackageTags>
     <PackageReleaseNotes>Support Gerogorian Calendar , Jalali Calendar , Hijri Calendar</PackageReleaseNotes>
     <Company>Mohammadreza Gholamizadeh [Phoenix] </Company>
     <Authors>Mohammadreza Gholamizadeh [Phoenix] </Authors>

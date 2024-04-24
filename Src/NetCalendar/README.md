@@ -1,8 +1,8 @@
-# NetCalendar
+# NetCalendar 2024.04.28
 This Package Is For Using The Different TypeOf DateTime And Converting The Date Together With High Accuracy And Most Easily That You Can Imagine . This Package Support Hijri Calendar , Jalali Calander (Persian Calendar) , Gregorian Calendar
 This Is The Best Tools For Converting Date To Each Other. Enjoy It
 
-![Logo](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/NetCalendar/main/ReadmeCreator/Files/NetCalendar.png)
+![Logo](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/NetCalendar/main/ReadmeCreator/Files/NetCalendar.png) 
 
 ## Authors
 - [@Mohammadreza Gholamizadeh [Phoenix]](https://github.com/MohammadRezaGholamizadeh)
@@ -27,8 +27,12 @@ You Can Use This Package And Tools Like This !!!
 ## Commands
 Package Manager
 ```bash
-NuGet\Install-Package NetCalendar -Version 2024.04.27
+NuGet\Install-Package NetCalendar -Version 2024.04.28
 ```
+## Feature Of Version 2024.04.28
+* Some Bugs Fixed 
+* Improve Performance In Calculation
+* Improve Accuracy Of Converting Dates
 
 # Class And Method Implementation
 ## Type : NetCalendars
