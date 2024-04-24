@@ -27,6 +27,20 @@ namespace NetCalendar.JalaliCalendersSet
 
         public JalaliDateTime AddDays(int days)
         {
+            var gregorian = NetCalendars.GregorianCalendar.ConvertJalaliToGregorian(this);
+            gregorian = gregorian.Date.AddDays(days);
+            var jalali = NetCalendars.JalaliCalander.ConvertGregorianToJalali(gregorian);
+
+            Year = jalali.Year;
+            Month = jalali.Month;
+            Day = jalali.Day;
+
+            return this;
+        }
+
+
+        public JalaliDateTime AddDays2(int days)
+        {
             var totalDays =
                 (Year - 1) * 365 + CalendarKabisehSet.JalaliKabiseh.Count(_ => int.Parse(_) < Year)
                 + (Month <= 6
@@ -36,7 +50,7 @@ namespace NetCalendar.JalaliCalendersSet
             totalDays += days;
 
             var newCalculatedYear = (totalDays % 365 == 0) ? (totalDays / 365) : (int)(totalDays / 365) + 1;
-            var remainigDay = totalDays % 365 == 0 ? 365 : totalDays % 365;
+            var remainigDay = totalDays % 365 == 0 ? 1 : totalDays % 365;
             var kabisehCount = CalendarKabisehSet.JalaliKabiseh.Count(_ => int.Parse(_) < newCalculatedYear);
 
 

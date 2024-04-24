@@ -9,11 +9,14 @@ namespace NetCalendar.JalaliCalendersSet
     {
         public JalaliDateTime ConvertGregorianToJalali(DateTime gregorianDate)
         {
-            if (gregorianDate < new DateTime(0622, 03, 22))
+            if (gregorianDate < CalendarRequirementSet.PersianCalendar.MinSupportedDateTime.Date)
                 throw new Exception("Invalid DateTime !!! Hijri Shamis DateTime Must Bigger Than 0622-03-22 ");
 
             var totalGerogorianDays =
-                (gregorianDate.Date - new DateTime(0622, 03, 22).Date).TotalDays + 1;
+                (gregorianDate.Date - CalendarRequirementSet
+                                      .PersianCalendar
+                                      .MinSupportedDateTime
+                                      .Date).TotalDays + 1;
 
             var jalaliYear = CalendarRequirementSet.PersianCalendar.GetYear(gregorianDate);
 
