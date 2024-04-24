@@ -22,7 +22,7 @@ namespace NetCalendar.GregorianCalendersSet
 
             var gerogorianYear =
                 CalendarRequirementSet.PersianCalendar
-                .ToDateTime(jalaliDateTime.Year, jalaliDateTime.Month, jalaliDateTime.Day, 01, 01, 01, 01)
+                .ToDateTime(jalaliDateTime.Year, jalaliDateTime.Month, jalaliDateTime.Day, 00, 00, 00, 00)
                 .Year;
 
             var totalDaysOfPreviousYears =
@@ -33,12 +33,24 @@ namespace NetCalendar.GregorianCalendersSet
             var tartibGerogorianDays = new int[] { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
             int gerogorianMonth = 0;
             int gerogorianDays = totalDaysInCurrentYear;
+
             for (int i = 1; i < 13; i++)
             {
                 gerogorianMonth = i;
-                if (gerogorianDays > tartibGerogorianDays[i - 1] && DateTime.IsLeapYear(gerogorianYear) && i == 2)
+
+                if (i == 2
+                    && DateTime.IsLeapYear(gerogorianYear)
+                    && gerogorianDays > tartibGerogorianDays[i - 1])
                 {
-                    gerogorianDays -= 29;
+                    if (gerogorianDays - 29 == 0)
+                    {
+                        gerogorianDays = 29;
+                        break;
+                    }
+                    else
+                    {
+                        gerogorianDays -= 29;
+                    }
                 }
                 else if (gerogorianDays > tartibGerogorianDays[i - 1])
                 {
@@ -80,7 +92,7 @@ namespace NetCalendar.GregorianCalendersSet
             for (int i = 1; i < 13; i++)
             {
                 gerogorianMonth = i;
-                if (gerogorianDays > tartibGerogorianDays[i - 1] 
+                if (gerogorianDays > tartibGerogorianDays[i - 1]
                     && DateTime.IsLeapYear(gerogorianYear) && i == 2)
                 {
                     gerogorianDays -= 29;

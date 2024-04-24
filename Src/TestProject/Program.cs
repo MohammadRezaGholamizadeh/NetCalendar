@@ -1,19 +1,19 @@
 ﻿using NetCalendar;
+using NetCalendar.JalaliCalendersSet;
 
-var gregorianDate = new DateTime(2025 , 02 , 12);
 
-var jalaliDate = NetCalendars.JalaliCalander.ConvertGregorianToJalali(gregorianDate);
+for (int i = 0; i < 100; i++)
+{
+    var gregorianDate = NetCalendars.GregorianCalendar.ConvertJalaliToGregorian(new JalaliDateTime(1399 + i, 1, 1));
+    var jalaliDate = NetCalendars.JalaliCalander.ConvertGregorianToJalali(gregorianDate);
+    Console.WriteLine($"{jalaliDate.Year} - {jalaliDate.Month} - {jalaliDate.Day}   ---- i = 1");
+    for (int j = 2; j < 367; j++)
+    {
+        jalaliDate.AddDays(7);
+        Console.WriteLine($"{jalaliDate.Year} - {jalaliDate.Month} - {jalaliDate.Day}   ---- i = {j}");
+    }
+}
 
-jalaliDate
-   .AddMonths(1);
-
-var convertedDateFromJalaliToGregorian =
-    NetCalendars.GregorianCalendar
-                .ConvertJalaliToGregorian(jalaliDate);
-
-var convertedDateFromJalaliToGregorian2 =
-    NetCalendars.GregorianCalendar
-                .ConvertJalaliToGregorian(jalaliDate.Year, jalaliDate.Month, jalaliDate.Day);
 
 
 
