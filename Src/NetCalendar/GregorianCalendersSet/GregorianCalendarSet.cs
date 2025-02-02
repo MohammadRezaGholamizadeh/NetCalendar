@@ -62,7 +62,12 @@ namespace NetCalendar.GregorianCalendersSet
                 }
             }
 
-            return new DateTime(gerogorianYear, gerogorianMonth, gerogorianDays);
+            return new DateTime(gerogorianYear,
+                                gerogorianMonth,
+                                gerogorianDays,
+                                (int)jalaliDateTime.Hour,
+                                (int)jalaliDateTime.Minute,
+                                (int)jalaliDateTime.Second);
         }
 
         public DateTime ConvertJalaliToGregorian(int year, int month, int day)
@@ -107,7 +112,9 @@ namespace NetCalendar.GregorianCalendersSet
                 }
             }
 
-            return new DateTime(gerogorianYear, gerogorianMonth, gerogorianDays);
+            return new DateTime(gerogorianYear,
+                                gerogorianMonth,
+                                gerogorianDays);
         }
     }
 }

@@ -21,6 +21,7 @@ namespace NetCalendar.JalaliCalendersSet
             Day = day;
             Hour = hour;
             Minute = minute;
+            Second = second;
             OriginalValue = new OriginalJalaliDateTime(year, month, day, hour, minute, second);
         }
 
@@ -58,8 +59,8 @@ namespace NetCalendar.JalaliCalendersSet
         public JalaliDateTime AddDays(int days)
         {
             var gregorian = NetCalendars.GregorianCalendar.ConvertJalaliToGregorian(this);
-            gregorian = gregorian.Date.AddDays(days);
-            var jalali = NetCalendars.JalaliCalander.ConvertGregorianToJalali(gregorian);
+            var gregorianAfterAddDays = gregorian.AddDays(days);
+            var jalali = NetCalendars.JalaliCalander.ConvertGregorianToJalali(gregorianAfterAddDays);
 
             Year = jalali.Year;
             Month = jalali.Month;

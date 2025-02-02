@@ -52,7 +52,7 @@ namespace NetCalendar.JalaliCalendersSet
                      ? 30
                      : (totalDaysInCurrentYear - 186) % 30;
 
-            return new JalaliDateTime(jalaliYear, jalaliMonth, jalaliDay);
+            return new JalaliDateTime(jalaliYear, jalaliMonth, jalaliDay, gregorianDate.Hour, gregorianDate.Minute, gregorianDate.Second);
         }
         public bool IsLeapYear(int year)
         {
