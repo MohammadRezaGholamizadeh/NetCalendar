@@ -7,6 +7,7 @@ var generatedReadme =
         .AddAssembly(typeof(NetCalendars).Assembly)
         .SetProjectDetail("NetCalendar", "This Package Is For Using The Different TypeOf DateTime And Converting The Date Together With High Accuracy And Most Easily That You Can Imagine . This Package Support Hijri Calendar , Jalali Calander (Persian Calendar) , Gregorian Calendar" + Environment.NewLine +
         "This Is The Best Tools For Converting Date To Each Other. Enjoy It" + Environment.NewLine)
+        .AddFeatures("*Add Time To Calendar For Converting ")
         .SetLogo(new Logo()
         {
             Title = "Logo",
@@ -58,4 +59,4 @@ var generatedReadme =
         .RenderAllAssembliesToText()
         .GetText();
 
-File.WriteAllText(@$"D:\TAAV\NetCalendar\README.md", generatedReadme);
+File.WriteAllText(@$"C:\NetCalendarRepo\NetCalendar\Src\NetCalendar\README.md", generatedReadme);
