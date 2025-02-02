@@ -1,9 +1,11 @@
-# NetCalendar
+# NetCalendar 2025.02.02 -- New Version
 This Package Is For Using The Different TypeOf DateTime And Converting The Date Together With High Accuracy And Most Easily That You Can Imagine . This Package Support Hijri Calendar , Jalali Calander (Persian Calendar) , Gregorian Calendar
 This Is The Best Tools For Converting Date To Each Other. Enjoy It
 
 ## Features
-- *Add Time To Calendar For Converting 
+- Add Date And Time To Calendar
+- Infrastructure Of Managing Time In Calendar
+- Easy Way To Convert Gregorian To Jalali And Jalali To Gregorian
 
 ![Logo](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/NetCalendar/main/ReadmeCreator/Files/NetCalendar.png)
 
@@ -25,7 +27,15 @@ I MohammadReza Gholamizadeh. I`m Dotnet Software Developer That Always Try To Ma
 ## Get Start With Sample Code
 You Can Use This Package And Tools Like This !!!
 
-![Sample](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/NetCalendar/main/ReadmeCreator/Files/Sample.png)
+## Converting Gregorian To Jalali
+Use Tools Like This !!!
+
+![GregorianToJalali](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/NetCalendar/refs/heads/dev/ReadmeCreator/Files/JalaliToGregorian.png)
+
+## Converting Jalali To Gregorian
+Use Tools Like This !!!
+
+![JalaliToGregorian](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/NetCalendar/refs/heads/dev/ReadmeCreator/Files/JalaliToGregorian.png)
 
 ## Commands
 Package Manager
@@ -41,6 +51,7 @@ NuGet\Install-Package NetCalendar -Version 2024.04.20
 ## Type : JalaliCalendarSet
 ### This Type Has 1 Custom Constructor : 
 * Constructor Number 1 : [ Void ] 
+
 ### JalaliCalendarSet Methods : 
 
 * ConvertGregorianToJalali(gregorianDate)
@@ -68,6 +79,7 @@ NuGet\Install-Package NetCalendar -Version 2024.04.20
 | `hour` | `Int32` | ** **Required.**                    |
 | `minute` | `Double` | ** **Required.**                    |
 | `second` | `Double` | ** **Required.**                    |
+
 ### JalaliDateTime Methods : 
 
 * AddHours(hours)
@@ -113,7 +125,6 @@ NuGet\Install-Package NetCalendar -Version 2024.04.20
 
 
 * IsLeapDay()
-
 
 
 ## Type : GregorianCalendarSet
