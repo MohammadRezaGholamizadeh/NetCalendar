@@ -7,6 +7,7 @@ var generatedReadme =
         .AddAssembly(typeof(NetCalendars).Assembly)
         .SetProjectDetail("NetCalendar", "This Package Is For Using The Different TypeOf DateTime And Converting The Date Together With High Accuracy And Most Easily That You Can Imagine . This Package Support Hijri Calendar , Jalali Calander (Persian Calendar) , Gregorian Calendar" + Environment.NewLine +
         "This Is The Best Tools For Converting Date To Each Other. Enjoy It" + Environment.NewLine)
+        .AddFeatures("Add Date And Time To Calendar", "Infrastructure Of Managing Time In Calendar", "Easy Way To Convert Gregorian To Jalali And Jalali To Gregorian")
         .SetLogo(new Logo()
         {
             Title = "Logo",
@@ -53,9 +54,12 @@ var generatedReadme =
             LicenseLink = "https://github.com/MohammadRezaGholamizadeh/NetCalendar/blob/main/LICENSE"
         })
         .AddCustomText("Get Start With Sample Code", "You Can Use This Package And Tools Like This !!!")
-        .SetLogo("Sample", "https://raw.githubusercontent.com/MohammadRezaGholamizadeh/NetCalendar/main/ReadmeCreator/Files/Sample.png")
+        .AddCustomText("Converting Gregorian To Jalali", "Use Tools Like This !!!")
+        .SetLogo("GregorianToJalali", "https://raw.githubusercontent.com/MohammadRezaGholamizadeh/NetCalendar/refs/heads/dev/ReadmeCreator/Files/JalaliToGregorian.png")
+        .AddCustomText("Converting Jalali To Gregorian", "Use Tools Like This !!!")
+        .SetLogo("JalaliToGregorian", "https://raw.githubusercontent.com/MohammadRezaGholamizadeh/NetCalendar/refs/heads/dev/ReadmeCreator/Files/JalaliToGregorian.png")
         .AddCustomBashCommand("Package Manager", @"NuGet\Install-Package NetCalendar -Version 2024.04.20")
         .RenderAllAssembliesToText()
         .GetText();
 
-File.WriteAllText(@$"D:\TAAV\NetCalendar\README.md", generatedReadme);
+File.WriteAllText(@$"C:\NetCalendarRepo\NetCalendar\Src\NetCalendar\README.md", generatedReadme);
