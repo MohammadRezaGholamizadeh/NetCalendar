@@ -1,4 +1,5 @@
 ﻿using NetCalendar;
+using NetCalendar.GregorianCalendersSet;
 using NetCalendar.JalaliCalendersSet;
 
 
@@ -17,6 +18,37 @@ for (int i = 0; i < 100; i++)
 
 
 
+// Convert Jalali To Gregorian Date Time 
+var JalaliDateTime = new JalaliDateTime(
+                         year: 1403,
+                         month: 11,
+                         day: 14,
+                         hour: 10,
+                         minute: 52,
+                         second: 25);
+
+var gregorianDateTime = JalaliDateTime.ConvertToGregorian();
+gregorianDateTime
+    .AddYears(1)
+    .AddMonths(1)
+    .AddDays(1)
+    .AddHours(1)
+    .AddMinutes(1)
+    .AddSeconds(1)
+    .AddMilliseconds(1);
+
+// Or
+
+gregorianDateTime = new GregorianCalendarSet()
+                        .ConvertJalaliToGregorian(JalaliDateTime);
+gregorianDateTime
+    .AddYears(1)
+    .AddMonths(1)
+    .AddDays(1)
+    .AddHours(1)
+    .AddMinutes(1)
+    .AddSeconds(1)
+    .AddMilliseconds(1);
 
 
 
