@@ -13,14 +13,10 @@
 
   <ItemGroup>
     <None Remove="Files\NetCalendar.png" />
-    <None Remove="Files\Sample.png" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Files\NetCalendar.png" />
-    <EmbeddedResource Include="Files\Sample.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
