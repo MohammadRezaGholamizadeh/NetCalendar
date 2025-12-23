@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ApplicationIcon>PackageFiles\Logo.ico</ApplicationIcon>
     <DebugType>embedded</DebugType>
-    <Version>2025.02.02</Version>
+    <Version>2025.12.23</Version>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <Description>This Package Is For Using The Different TypeOf DateTime And Converting The Date Together With High Accuracy And Most Easily That You Can Imagine . This Package Support Hijri Calendar , Jalali Calander (Persian Calendar) , Gregorian Calendar This Is The Best Tools For Converting Date To Each Other. Enjoy It</Description>
