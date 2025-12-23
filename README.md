@@ -1,4 +1,4 @@
-# NetCalendar 2025.02.02 -- New Version
+# NetCalendar 2025.12.23 -- New Version
 This Package Is For Using The Different TypeOf DateTime And Converting The Date Together With High Accuracy And Most Easily That You Can Imagine . This Package Support Hijri Calendar , Jalali Calander (Persian Calendar) , Gregorian Calendar
 This Is The Best Tools For Converting Date To Each Other. Enjoy It
 
@@ -6,6 +6,7 @@ This Is The Best Tools For Converting Date To Each Other. Enjoy It
 - Add Date And Time To Calendar
 - Infrastructure Of Managing Time In Calendar
 - Easy Way To Convert Gregorian To Jalali And Jalali To Gregorian
+- Fixed The Documentation And Make It Easy To Use
 
 ![Logo](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/NetCalendar/main/ReadmeCreator/Files/NetCalendar.png)
 
@@ -44,7 +45,7 @@ NuGet\Install-Package NetCalendar -Version 2024.04.20
 ```
 
 # Class And Method Implementation
-## Type : NetCalendars
+## Type : NetCalendarSet
 ### NetCalendars Methods : 
 
 
