@@ -4,7 +4,7 @@ using NetCalendar;
 
 var generatedReadme =
     new ReadmeGenerator()
-        .AddAssembly(typeof(NetCalendars).Assembly)
+        .AddAssembly(typeof(NetCalendarSet).Assembly)
         .SetProjectDetail("NetCalendar", "This Package Is For Using The Different TypeOf DateTime And Converting The Date Together With High Accuracy And Most Easily That You Can Imagine . This Package Support Hijri Calendar , Jalali Calander (Persian Calendar) , Gregorian Calendar" + Environment.NewLine +
         "This Is The Best Tools For Converting Date To Each Other. Enjoy It" + Environment.NewLine)
         .AddFeatures("Add Date And Time To Calendar", "Infrastructure Of Managing Time In Calendar", "Easy Way To Convert Gregorian To Jalali And Jalali To Gregorian")

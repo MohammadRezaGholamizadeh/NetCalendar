@@ -12,15 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Files\GregorianToJalali.png" />
-    <None Remove="Files\JalaliToGregorian.png" />
     <None Remove="Files\NetCalendar.png" />
     <None Remove="Files\Sample.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Files\GregorianToJalali.png" />
-    <EmbeddedResource Include="Files\JalaliToGregorian.png" />
     <EmbeddedResource Include="Files\NetCalendar.png" />
     <EmbeddedResource Include="Files\Sample.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
