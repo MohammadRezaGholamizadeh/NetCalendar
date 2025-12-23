@@ -1,4 +1,4 @@
-# NetCalendar 2025.02.02 -- New Version 
+# NetCalendar 2025.02.02 -- New Version
 This Package Is For Using The Different TypeOf DateTime And Converting The Date Together With High Accuracy And Most Easily That You Can Imagine . This Package Support Hijri Calendar , Jalali Calander (Persian Calendar) , Gregorian Calendar
 This Is The Best Tools For Converting Date To Each Other. Enjoy It
 
@@ -30,7 +30,7 @@ You Can Use This Package And Tools Like This !!!
 ## Converting Gregorian To Jalali
 Use Tools Like This !!!
 
-![GregorianToJalali](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/NetCalendar/refs/heads/dev/ReadmeCreator/Files/JalaliToGregorian.png)
+![GregorianToJalali](https://raw.githubusercontent.com/MohammadRezaGholamizadeh/NetCalendar/refs/heads/dev/ReadmeCreator/Files/GregorianToJalali.png)
 
 ## Converting Jalali To Gregorian
 Use Tools Like This !!!
