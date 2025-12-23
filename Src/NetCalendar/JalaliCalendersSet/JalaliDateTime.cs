@@ -42,9 +42,9 @@ namespace NetCalendar.JalaliCalendersSet
 
         public JalaliDateTime AddHours(int hours)
         {
-            var gregorian = NetCalendars.GregorianCalendar.ConvertJalaliToGregorian(this);
+            var gregorian = NetCalendarSet.GregorianCalendar.ConvertJalaliToGregorian(this);
             gregorian = gregorian.AddHours(hours);
-            var jalali = NetCalendars.JalaliCalander.ConvertGregorianToJalali(gregorian);
+            var jalali = NetCalendarSet.JalaliCalander.ConvertGregorianToJalali(gregorian);
 
             Year = jalali.Year;
             Month = jalali.Month;
@@ -58,9 +58,9 @@ namespace NetCalendar.JalaliCalendersSet
 
         public JalaliDateTime AddMinutes(int minutes)
         {
-            var gregorian = NetCalendars.GregorianCalendar.ConvertJalaliToGregorian(this);
+            var gregorian = NetCalendarSet.GregorianCalendar.ConvertJalaliToGregorian(this);
             gregorian = gregorian.AddMinutes(minutes);
-            var jalali = NetCalendars.JalaliCalander.ConvertGregorianToJalali(gregorian);
+            var jalali = NetCalendarSet.JalaliCalander.ConvertGregorianToJalali(gregorian);
 
             Year = jalali.Year;
             Month = jalali.Month;
@@ -74,9 +74,9 @@ namespace NetCalendar.JalaliCalendersSet
 
         public JalaliDateTime AddSeconds(int seconds)
         {
-            var gregorian = NetCalendars.GregorianCalendar.ConvertJalaliToGregorian(this);
+            var gregorian = NetCalendarSet.GregorianCalendar.ConvertJalaliToGregorian(this);
             gregorian = gregorian.AddSeconds(seconds);
-            var jalali = NetCalendars.JalaliCalander.ConvertGregorianToJalali(gregorian);
+            var jalali = NetCalendarSet.JalaliCalander.ConvertGregorianToJalali(gregorian);
 
             Year = jalali.Year;
             Month = jalali.Month;
@@ -90,9 +90,9 @@ namespace NetCalendar.JalaliCalendersSet
 
         public JalaliDateTime AddDays(int days)
         {
-            var gregorian = NetCalendars.GregorianCalendar.ConvertJalaliToGregorian(this);
+            var gregorian = NetCalendarSet.GregorianCalendar.ConvertJalaliToGregorian(this);
             var gregorianAfterAddDays = gregorian.AddDays(days);
-            var jalali = NetCalendars.JalaliCalander.ConvertGregorianToJalali(gregorianAfterAddDays);
+            var jalali = NetCalendarSet.JalaliCalander.ConvertGregorianToJalali(gregorianAfterAddDays);
 
             Year = jalali.Year;
             Month = jalali.Month;
